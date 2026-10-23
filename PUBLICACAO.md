@@ -1,6 +1,6 @@
 # Critérios de publicação
 
-Este portfólio foi preparado para exposição pública com princípio de minimização de dados.
+Preparei este portfólio para exposição pública aplicando o princípio de minimização de dados.
 
 ## Publicado
 
@@ -20,5 +20,5 @@ Este portfólio foi preparado para exposição pública com princípio de minimi
 - mídia de terceiros cuja licença de redistribuição não pôde ser confirmada;
 - evidências detalhadas de alvos externos e relatórios marcados como confidenciais.
 
-Os arquivos originais não foram alterados nem apagados; a publicação usa uma cópia organizada e sanitizada.
+Não alterei nem apaguei os arquivos originais; usei uma cópia organizada e sanitizada para esta publicação.
 

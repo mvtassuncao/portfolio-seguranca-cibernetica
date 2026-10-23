@@ -1,8 +1,8 @@
 # Rettah Auth Pentest Lab
 
-Aplicação Flask deliberadamente vulnerável para uso **exclusivo em aula, VM ou rede isolada e autorizada**.
+Desenvolvi esta aplicação Flask deliberadamente vulnerável para estudar autenticação e sessão. Ela deve ser usada **exclusivamente em aula, VM ou rede isolada e autorizada**.
 
-## Objetivos
+## O que eu quis estudar
 
 - ausência de limitação de tentativas;
 - armazenamento MD5 e comparação com vazamento temporal;
@@ -11,7 +11,13 @@ Aplicação Flask deliberadamente vulnerável para uso **exclusivo em aula, VM o
 - reset de senha com token previsível/vazado;
 - descoberta de uma flag armazenada no banco como dado de usuário.
 
-Na primeira execução, acesse a aplicação e informe o nome do aluno. Cinco flags individuais serão geradas no formato `flagN_nome_quantidadeDeLetrasNumeroAleatorio`. Apague `.student.json` e `lab.db` para reiniciar para outro aluno.
+Organizei o laboratório como uma sequência de desafios porque queria observar cada falha separadamente e depois entender como elas podem formar uma cadeia. Na primeira execução, acesse a aplicação e informe o nome do aluno. Cinco flags individuais serão geradas. Apague `.student.json` e `lab.db` para reiniciar para outro aluno.
+
+## Minha lógica de análise
+
+Comecei pelo fluxo de login e acompanhei o dado até o banco. Depois observei como o token e o cookie eram criados e quais decisões de autorização o servidor tomava. Por último, analisei a recuperação de senha. Essa sequência mostrou que autenticar uma identidade e autorizar uma ação são problemas diferentes.
+
+Para cada falha, relacionei uma correção: limitação de tentativas, algoritmo moderno para senha, comparação segura, renovação de sessão, verificação de assinatura JWT e token de recuperação aleatório e de uso único.
 
 ## Windows
 

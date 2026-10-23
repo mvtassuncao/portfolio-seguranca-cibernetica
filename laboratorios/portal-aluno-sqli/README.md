@@ -1,10 +1,10 @@
 # Portal do Aluno — laboratório de SQL Injection
 
-Aplicação acadêmica em Flask e SQLite, deliberadamente vulnerável, criada para demonstrar que dados recebidos do navegador nunca devem ser concatenados diretamente em SQL.
+Criei esta aplicação acadêmica em Flask e SQLite para demonstrar, de forma controlada, por que dados recebidos do navegador nunca devem ser concatenados diretamente em SQL.
 
 ## Como a criação se baseou
 
-O laboratório parte de um fluxo simples de autenticação por matrícula e senha. A implementação insegura mistura a entrada do usuário com a instrução SQL, tornando visível a causa raiz da injeção. Uma tabela separada representa um dado que deveria permanecer inacessível.
+Parti de um fluxo simples de autenticação por matrícula e senha. Implementei propositalmente uma versão insegura que mistura a entrada do usuário com a instrução SQL, deixando visível a causa raiz da injeção. Usei uma tabela separada para representar um dado que deveria permanecer inacessível.
 
 ## Prática e aprendizados
 

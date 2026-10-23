@@ -1,6 +1,6 @@
 # Relatórios selecionados para publicação
 
-Esta pasta contém somente documentos considerados adequados para exposição pública após triagem.
+Nesta pasta reuni os documentos que considerei adequados para exposição pública depois de revisar dados, evidências e autoria.
 
 ## Redes
 
@@ -13,5 +13,5 @@ Esta pasta contém somente documentos considerados adequados para exposição p�
 
 - `tabuleiro_jogo_vida_digital.pdf` — recurso lúdico de educação em segurança, com escolhas sobre senhas, redes públicas, golpes e proteção de dados.
 
-Trabalhos com coautoria identificável, material de prova, credenciais, hashes, flags, dados de alvo ou marcação de confidencialidade foram substituídos por sínteses no [catálogo](../catalogo.md).
+Substituí por sínteses no [catálogo](../catalogo.md) os trabalhos que continham coautoria identificável, material de prova, credenciais, hashes, flags, dados de alvo ou marcação de confidencialidade. Dessa forma, apresento meu raciocínio sem expor outras pessoas ou organizações.
 

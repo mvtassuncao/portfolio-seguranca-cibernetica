@@ -1,6 +1,6 @@
 # Site de pizzaria
 
-Projeto multipágina construído para praticar navegação consistente, organização de conteúdo comercial e formulários.
+Desenvolvi este projeto multipágina para praticar navegação consistente, organização de conteúdo comercial e formulários.
 
 ## Estrutura
 

@@ -1,6 +1,6 @@
 # Site temático de artista
 
-Projeto multipágina criado para praticar HTML, CSS e JavaScript com diferentes tipos de conteúdo.
+Criei este projeto multipágina para praticar HTML, CSS e JavaScript com diferentes tipos de conteúdo.
 
 ## Componentes
 
@@ -9,5 +9,5 @@ Projeto multipágina criado para praticar HTML, CSS e JavaScript com diferentes 
 - carrossel e lightbox em JavaScript;
 - folha de estilos compartilhada.
 
-O trabalho demonstra organização de front-end e interação no cliente. Validação no navegador melhora a experiência, mas não substitui validação no servidor. Fotos e vídeos de terceiros foram removidos por não haver licença de redistribuição confirmada.
+Com este trabalho pratiquei organização de front-end e interação no cliente. Também aprendi que a validação no navegador melhora a experiência, mas não substitui a validação no servidor. Removi fotos e vídeos de terceiros porque não consegui confirmar a licença de redistribuição.
 

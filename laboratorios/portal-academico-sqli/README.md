@@ -1,10 +1,10 @@
 # Portal Acadêmico — laboratório de SQL Injection
 
-Aplicação Flask/SQLite criada para estudar o efeito de SQL Injection sobre os resultados processados e exibidos pelo servidor.
+Criei esta aplicação Flask/SQLite para estudar o efeito de SQL Injection sobre os resultados processados e exibidos pelo servidor.
 
 ## Como a criação se baseou
 
-O banco é recriado a cada inicialização com dados fictícios, garantindo um estado conhecido e repetível. O formulário envia matrícula e senha; a versão vulnerável concatena esses valores na consulta para tornar a falha observável em um ambiente controlado.
+Configurei o banco para ser recriado a cada inicialização com dados fictícios, garantindo um estado conhecido e repetível. O formulário envia matrícula e senha; na versão vulnerável, concatenei propositalmente esses valores na consulta para tornar a falha observável em ambiente controlado.
 
 ## Prática e aprendizados
 

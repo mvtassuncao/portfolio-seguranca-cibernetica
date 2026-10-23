@@ -1,6 +1,6 @@
 # Política de segurança e uso responsável
 
-Este repositório é um portfólio acadêmico de Segurança Cibernética desenvolvido entre 2024 e 2026. Os laboratórios vulneráveis existem exclusivamente para estudo em ambiente local, isolado e autorizado.
+Este repositório é o meu portfólio acadêmico de Segurança Cibernética, desenvolvido entre 2024 e 2026. Publiquei os laboratórios vulneráveis exclusivamente para estudo em ambiente local, isolado e autorizado.
 
 ## Uso responsável
 

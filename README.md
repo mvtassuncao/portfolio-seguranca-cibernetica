@@ -1,49 +1,76 @@
-# Portfólio Técnico — Segurança Cibernética
+# Meu Portfólio Técnico em Segurança Cibernética
 
-Portfólio de **Marcos Vinicio Tiburcio Assunção**, reunindo atividades desenvolvidas durante a formação técnica em Segurança Cibernética, entre **2024 e 2026**.
+Olá! Eu sou **Marcos Vinicio Tiburcio Assunção** e este repositório reúne os principais trabalhos que desenvolvi durante minha formação técnica em **Segurança Cibernética**, entre **2024 e 2026**.
 
-O acervo mostra a evolução prática em segurança ofensiva e defensiva, análise de vulnerabilidades, testes de intrusão autorizados, segurança de aplicações web, redes, criptografia, documentação técnica e desenvolvimento web. Cada item foi organizado para explicar o problema estudado, os fundamentos usados, a prática realizada e os aprendizados obtidos.
+Criei este portfólio para apresentar de forma organizada o que aprendi e pratiquei durante o curso. Aqui estão meus laboratórios de segurança, análises de vulnerabilidades, relatórios de pentest, atividades de redes e criptografia, além de projetos em HTML, CSS, JavaScript, Python, Flask e SQLite.
 
-> **Ética e segurança:** os exemplos ofensivos foram produzidos em laboratórios didáticos, máquinas vulneráveis ou alvos explicitamente destinados a testes. Evidências sensíveis, dados pessoais, credenciais, hashes, tokens, flags, bancos de dados e detalhes de terceiros não são publicados. Consulte [SECURITY.md](SECURITY.md).
+Meu objetivo não é apenas mostrar arquivos prontos. Em cada seção eu procuro explicar:
 
-## Visão geral
+- o que eu estava estudando;
+- por que desenvolvi aquela atividade;
+- quais ferramentas e conceitos utilizei;
+- como organizei meu raciocínio durante a análise;
+- o que encontrei e como cheguei à conclusão;
+- quais correções ou melhorias eu recomendaria;
+- o que aprendi com a prática.
 
-| Área | Evidências no portfólio | Competências demonstradas |
+> Todos os testes ofensivos foram realizados em laboratórios didáticos, máquinas vulneráveis, redes isoladas ou alvos destinados a testes. Removi da versão pública dados pessoais, credenciais, hashes, tokens, flags, bancos de dados e evidências que pudessem afetar terceiros. Mais detalhes estão em [SECURITY.md](SECURITY.md).
+
+## O que este portfólio demonstra
+
+| Área | O que eu pratiquei | Conhecimentos demonstrados |
 |---|---|---|
-| Segurança de aplicações | Laboratórios Flask vulneráveis e estudos de caso | SQL Injection, autenticação, JWT, sessões, reset de senha, mitigação |
-| Pentest e vulnerabilidades | Relatórios sanitizados e análises de laboratório | Reconhecimento, enumeração, validação, risco, impacto e remediação |
-| Redes | Estudos com Nmap, serviços e ambientes virtualizados | Descoberta de hosts, portas, versões, segmentação e análise de exposição |
-| Criptografia | Trabalho sobre assinaturas digitais | Hashes, criptografia assimétrica, autenticidade, integridade e não repúdio |
-| Desenvolvimento web | Sites acadêmicos em HTML, CSS e JavaScript | Estrutura semântica, navegação, formulários, responsividade e organização de assets |
-| Comunicação | Relatórios, apresentação e atividade de soft skills | Escrita técnica, comunicação de risco, síntese e trabalho em equipe |
+| Segurança de aplicações | Criação e análise de aplicações Flask vulneráveis | SQL Injection, autenticação, JWT, sessões, reset de senha e mitigação |
+| Pentest | Reconhecimento, enumeração, validação e documentação | Escopo, evidências, impacto, risco, recomendação e reteste |
+| Redes | Descoberta de hosts, portas e serviços | Nmap, redes virtuais, segmentação e interpretação de resultados |
+| Criptografia | Estudo de assinaturas digitais | Hashes, chaves assimétricas, autenticidade, integridade e não repúdio |
+| Desenvolvimento web | Sites acadêmicos multipágina | HTML5, CSS3, JavaScript, formulários e organização de código |
+| Comunicação técnica | Relatórios e apresentações | Escrita técnica, síntese, explicação de risco e trabalho em equipe |
 
-## Organização
+## Como organizei o repositório
 
-- [`laboratorios/`](laboratorios/) — aplicações deliberadamente vulneráveis para estudo controlado.
-- [`estudos-de-caso/`](estudos-de-caso/) — sínteses sanitizadas de avaliações e exercícios de segurança.
-- [`relatorios/`](relatorios/) — documentos acadêmicos seguros para consulta pública.
-- [`projetos-web/`](projetos-web/) — aplicações e sites desenvolvidos ao longo do curso.
-- [`catalogo.md`](catalogo.md) — índice completo, com contexto, base conceitual, prática e aprendizados.
-- [`PUBLICACAO.md`](PUBLICACAO.md) — critérios usados para decidir o que pode ser publicado.
+- [`laboratorios/`](laboratorios/) — aplicações que criei ou utilizei para compreender vulnerabilidades em ambiente controlado.
+- [`estudos-de-caso/`](estudos-de-caso/) — análises públicas e sanitizadas dos exercícios de pentest.
+- [`relatorios/`](relatorios/) — documentos acadêmicos que passaram pela revisão de segurança para publicação.
+- [`projetos-web/`](projetos-web/) — sites e aplicações desenvolvidos durante o curso.
+- [`catalogo.md`](catalogo.md) — explicação detalhada de cada trabalho, incluindo minha linha de raciocínio.
+- [`PUBLICACAO.md`](PUBLICACAO.md) — o que decidi publicar e o que mantive fora por segurança ou privacidade.
 
-## Metodologia recorrente
+## Como eu conduzo uma análise
 
-Os trabalhos de segurança seguem, conforme a atividade, um fluxo inspirado em boas práticas de avaliação:
+Ao longo do curso, desenvolvi uma forma de organizar meu raciocínio para não começar diretamente pela exploração:
 
-1. definição de escopo e autorização;
-2. preparação de ambiente isolado;
-3. reconhecimento e inventário;
-4. enumeração de serviços e superfície de ataque;
-5. validação controlada de vulnerabilidades;
-6. registro de evidências sem exposição desnecessária;
-7. análise de impacto e priorização de risco;
-8. recomendações de correção e reteste.
+1. **Entender o objetivo e o escopo:** primeiro identifico qual ambiente pode ser testado, quais limites devem ser respeitados e qual resultado a atividade espera.
+2. **Preparar um ambiente seguro:** sempre que possível, uso máquinas virtuais, rede isolada e dados fictícios.
+3. **Fazer reconhecimento:** procuro entender os hosts, portas, aplicações e serviços disponíveis.
+4. **Enumerar antes de concluir:** coleto versões e comportamentos para transformar uma suspeita em uma hipótese técnica.
+5. **Validar com controle:** testo somente o necessário para comprovar ou descartar a hipótese, evitando ações fora do escopo.
+6. **Registrar evidências:** documento comandos, respostas, capturas e observações relevantes.
+7. **Analisar impacto:** relaciono a falha técnica com confidencialidade, integridade, disponibilidade e possíveis efeitos para o negócio.
+8. **Recomendar correções:** procuro tratar a causa raiz, não somente o sintoma.
+9. **Reconhecer limitações:** quando não há evidência suficiente, registro que a vulnerabilidade não foi confirmada.
 
-## Tecnologias e ferramentas
+Essa lógica foi importante para eu compreender que encontrar uma porta aberta, uma versão de software ou uma mensagem de erro não significa automaticamente que existe uma vulnerabilidade explorável.
 
-Python, Flask, SQLite, HTML5, CSS3, JavaScript, Nmap, Burp Suite, Kali Linux, máquinas virtuais, Metasploit em laboratório, conceitos de OWASP, autenticação, JWT, criptografia assimétrica e assinatura digital.
+## Ferramentas e tecnologias que utilizei
 
-## Como explorar este portfólio
+- **Nmap:** descoberta de hosts, identificação de portas, serviços e versões.
+- **Burp Suite:** observação e alteração controlada de requisições HTTP em laboratórios web.
+- **Kali Linux:** ambiente de apoio para ferramentas de segurança e testes autorizados.
+- **Metasploit Framework:** validação de vulnerabilidades conhecidas em máquinas deliberadamente vulneráveis.
+- **Python e Flask:** construção de aplicações e laboratórios de segurança.
+- **SQLite:** criação de bancos locais e estudo de consultas seguras e inseguras.
+- **HTML, CSS e JavaScript:** desenvolvimento de interfaces, sites, formulários e interações no navegador.
+- **Máquinas virtuais:** isolamento de redes e sistemas para execução segura das práticas.
+- **DevTools e `curl`:** inspeção de páginas, requisições, respostas e comportamento de endpoints.
 
-Comece pelo [catálogo técnico](catalogo.md). Os laboratórios possuem instruções próprias e avisos de isolamento. Os estudos de caso apresentam o raciocínio e as recomendações sem revelar material que possa afetar pessoas ou organizações.
+## Como visualizar os projetos
+
+Os projetos web podem ser abertos localmente pelo arquivo principal indicado em cada pasta. Os laboratórios Python possuem um `README.md` próprio com dependências, endereço local e cuidados de execução.
+
+Para conhecer o raciocínio técnico por trás de cada atividade, recomendo começar pelo meu [catálogo técnico](catalogo.md).
+
+## Uso responsável
+
+Este material foi publicado para demonstrar minha formação e meu desenvolvimento profissional. Não autorizo o uso dos laboratórios para atacar sistemas de terceiros. Qualquer teste de segurança deve possuir autorização, escopo e responsabilidade sobre os dados envolvidos.
 
