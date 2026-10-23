@@ -1,0 +1,546 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+}
+
+/* --- Topo / Cabeçalho --- */
+#cabecalho {
+    width: 100%;
+    height: 50px;
+    background-color: #181818; /* Cor de fundo escura */
+    display: flex;
+    align-items: center;
+}
+
+#cabecalho img {
+    width: 250px;   /* Tamanho da logo superior */
+    margin-left: 20px;
+}
+
+/* --- Banner de Destaque --- */
+#banner {
+    width: 100%;
+    height: auto;
+    margin-block-end: 20px;
+    align-items: center;
+    display: block;
+}
+
+#banner img {
+    width: 100%;
+    display: block;
+}
+
+/* --- Menu de Navegação --- */
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#menu a:hover {
+    color: #ebd300; /* Cor amarela ao passar o mouse */
+}
+
+/* Container que alinha o conteúdo do topo */
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* --- Seção de Cardápio (Destaques) --- */
+.destaques {
+    display: block;          
+    clear: both;            
+    max-width: 1000px;
+    margin: 40px auto;      
+    padding: 0 20px;
+    text-align: left;
+    position: relative;     
+}
+
+.titulo-destaque {
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+    color: #ff3c00;
+    margin-bottom: 5px;
+}
+
+/* Linha decorativa abaixo do título - Mantida em 310px */
+.linha-decorativa {
+    border: 0;
+    border-top: 8px solid #333;
+    width: 310px;
+    margin: 0 0 30px 0;
+}
+
+/* Grid das pizzas em 2 colunas */
+.grid-pizzas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+}
+
+.pizza-card-simples {
+    text-align: center;
+}
+
+.pizza-card-simples img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px #0000001a;
+    transition: 0.3s;
+    display: block; 
+}
+
+.pizza-card-simples p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* --- Logo Centralizada --- */
+#logo {
+    display: flex;
+    justify-content: center; 
+    margin: 20px 0; 
+    width: 100%; 
+}
+
+#logo img {
+    height: 80px; 
+    width: auto; 
+}
+
+/* --- Página de Contato --- */
+#corpo-contato {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-contato {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.formulario-box {
+    flex: 2; 
+}
+
+.formulario-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario-box input, 
+.formulario-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; 
+}
+
+.btn-enviar {
+    background-color: #ff3c00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-enviar:hover {
+    background-color: #181818;
+}
+
+.info-box {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+.info-box h3 {
+    color: #ff3c00;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Seção Unidades / Sobre Nós --- */
+#sobre-nos {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.container-sobre {
+    display: flex; 
+    gap: 40px;     
+    align-items: center;
+}
+
+.texto-unidades {
+    flex: 1;       
+    text-align: left;
+}
+
+.fotos-unidades {
+    flex: 1;       
+}
+
+.fotos-unidades img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover; 
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px #0000001a;
+}
+
+.texto-unidades h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.texto-unidades p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* --- Estilo do Rodapé --- */
+#rodape {
+    background-color: #181818; 
+    color: white;
+    padding: 50px 0 20px 0; 
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.container-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-info, .footer-contato, .footer-redes {
+    margin-bottom: 30px;
+    min-width: 250px; 
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.footer-info img {
+    max-width: 180px; 
+    height: auto;     
+    margin-bottom: 15px; 
+    display: block;
+}
+
+.footer-contato h4, .footer-redes h4 {
+    color: white;
+    font-size: 18px;
+    border-bottom: 2px solid #ff3c00; 
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.footer-contato p, .footer-info p {
+    font-size: 14px;
+    color: #bbb; 
+    line-height: 1.8; 
+    margin: 5px 0;
+}
+
+.icones-redes {
+    display: flex;
+    gap: 15px; 
+}
+
+.footer-redes a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-redes a:hover {
+    color: #ebd300; 
+}
+
+.direitos {
+    text-align: center;
+    border-top: 1px solid #181818; 
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* --- Promoção Especial --- */
+#promocao-especial {
+    width: 100%;
+    padding: 60px 0;
+}
+
+#promocao-especial .container-centralizado {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.promo-item {
+    display: flex;
+    align-items: center; 
+    gap: 40px;          
+    text-align: left;   
+}
+
+.texto-promo, .foto-promo {
+    flex: 1; 
+}
+
+/* Linha da Promoção - Mantida em 400px */
+.linha-decorativa-promo {
+    border: 0;
+    border-top: 8px solid #333;
+    width: 400px;
+    margin: 0 0 30px 0;
+}
+
+.texto-promo h2 {
+    color: #ff3c00; 
+    margin-bottom: 5px;
+}
+
+.texto-promo p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8; 
+    margin-bottom: 15px;
+}
+
+.foto-promo img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px #0000001a; 
+}
+
+.btn-delivery {
+    display: inline-block;
+    background-color: #ff3c00; 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-delivery:hover {
+    background-color: #181818; 
+}
+
+/* --- Layout Delivery --- */
+.container-delivery {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.formulario-box input, 
+.formulario-box textarea, 
+.formulario-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.info-delivery {
+    flex: 1;
+}
+
+.card-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff3c00; 
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+.card-info h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #ff3c00;
+}
+
+.card-info p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* --- Cards de Unidades Detalhados --- */
+.container-unidades-central {
+    max-width: 800px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+.unidade-card-detalhe {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex; 
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.unidade-img-container {
+    flex: 1;
+}
+
+.unidade-img-container img {
+    width: 400px;
+    height: 350px;
+    object-fit: cover; 
+}
+
+.unidade-texto-detalhe {
+    flex: 1.2;
+    padding: 30px;
+}
+
+.unidade-texto-detalhe h3 {
+    color: #ff3c00;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.subtitulo-unidade {
+    font-weight: bold;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.lista-detalhes {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.lista-detalhes li {
+    margin-bottom: 5px;
+}
+
+.acoes-unidades {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: #ff3c00; 
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-secundario:hover {
+   background-color: #181818; 
+}
+
+/* --- ADICIONADO APENAS O GIF E TEXTO LADO A LADO --- */
+
+#qualidade-pizza {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.container-qualidade {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.gif-qualidade {
+    flex: 1;
+}
+
+.gif-qualidade img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.texto-qualidade {
+    flex: 1;
+    text-align: left;
+}
+
+.texto-qualidade h2 {
+    color: #ff3c00;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.texto-qualidade p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}

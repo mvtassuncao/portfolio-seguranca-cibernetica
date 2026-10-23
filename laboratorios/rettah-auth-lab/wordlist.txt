@@ -1,0 +1,11 @@
+admin
+123456
+password
+qwerty
+teste123
+admin123
+senha123
+12345678
+abc123
+admin@123
+

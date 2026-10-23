@@ -1,0 +1,140 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservas - Marcos Pizzaria</title>
+    <link rel="stylesheet" href="pizzaria.css">
+</head>
+
+<body>
+    <br><br>
+    <div id="cabecalho">
+        <img src="cabecalho.png">
+        <nav id="menu">
+            <a href="home.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="promocao.html">Promoções</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="Franquias.html">Ambientes</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+
+    <br><br>
+    <div id="logo">
+        <img src="marcos_logo.png">
+    </div>
+
+    <div id="corpo-contato">
+        <section class="secao-contato">
+            <h2 class="titulo-destaque">Reserva De restaurante:</h2>
+            <hr class="linha-decorativa">
+
+            <div class="formulario-box">
+                <form action="#">
+                    <h3>Suas Informações:</h3>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Seu nome completo" required>
+
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" placeholder="Rua, Número, Bairro" required>
+
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade">
+
+                    <label for="estado">Estado:</label>
+                    <select id="estado">
+                        <option>Escolha um estado:</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </select>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone">
+
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" placeholder="(00) 00000-0000" required>
+
+                    <br><br>
+                    <h3>Informações do evento:</h3>
+
+                    <label for="tipo-evento">Tipo do evento:</label>
+                    <select id="tipo-evento">
+                        <option>Escolha um evento:</option>
+                        <option>Aniversário</option>
+                        <option>Confraternização</option>
+                        <option>Jantar Romântico</option>
+                    </select>
+
+                    <label>Nº de adultos:</label>
+                    <select>
+                        <option>Escolha o nº de adultos:</option>
+                        <option>1</option><option>2</option><option>3</option><option>4+</option>
+                    </select>
+
+                    <label>Nº de crianças:</label>
+                    <select>
+                        <option>Escolha o Nº de crianças:</option>
+                        <option>0</option><option>1</option><option>2</option><option>3+</option>
+                    </select>
+
+                    <label>Nº de mesas:</label>
+                    <select>
+                        <option>Escolha o nº de mesas:</option>
+                        <option>1</option><option>2</option><option>3</option>
+                    </select>
+
+                    <label>Data (DD/MM/AAAA):</label>
+                    <div class="input-group-reserva">
+                        <input type="date" class="w-60">
+                    <br>
+                    </div>
+
+                    <label>Horario:</label>
+                    <div class="input-group-reserva">
+                        <input type="time" class="w-60">
+                    <br>   
+                    </div>
+
+                    <br>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer id="rodape">
+        <div class="container-footer">
+            <div class="footer-info">
+                <img src="logo_branca.png">
+                <p>A melhor pizza da cidade, direto no seu sofá.</p>
+            </div>
+
+            <div class="footer-contato">
+                <h4>Contato</h4>
+                <p> ☏ (12) 3456-7890</p>
+                <p> Rua Principal, 100 - Centro</p>
+                <p> Av. Beira Mar, 500 - Novo Campeche</p>
+            </div>
+
+            <div class="footer-redes">
+                <h4>Siga-nos</h4>
+                <div class="icones-redes">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="direitos">
+            <p>&copy; 2026 MARCOS PIZZA - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

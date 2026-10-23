@@ -1,0 +1,138 @@
+<html lang="pt-BR">
+<head>
+    <title>Marcos & Belutti - Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/validar.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div id="cabecalho" class="logo">
+            <img src="imagem(1).webp" alt="Marcos e Belutti" >  
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biografia.html">Biografia</a></li>
+                <li><a href="discografia.html">Discografia</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="formulario.html" class="active">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section style="padding: 80px 20px; margin: 0 auto">
+            <h3 class="titulo-inclinado">Formulário</h3>
+            <h3 class="titulo-inclinado" style="font-size: 30px; margin-bottom: 50px;">Central de Fãs</h3>
+            
+            <form action="mailto:seu-email@exemplo.com" method="post" enctype="text/plain" class="form-fã-clube" onsubmit="return validarFormulario(event)">
+                
+                <h4>DADOS PESSOAIS</h4>
+                <div class="form-group">
+                    <label>Nome Completo:</label> <input type="text" name="nome" id="nome">
+                    <div class="erro" id="erro-nome"></div>
+                </div>
+                <div class="form-group">
+                    <label>Apelido:</label> <input type="text" name="apelido" id="apelido">
+                </div>
+                <div class="form-group">
+                    <label>Data de Nascimento:</label> <input type="date" name="nascimento" id="nascimento">
+                    <div class="erro" id="erro-nascimento"></div>
+                </div>
+                <div class="form-group">
+                    <label>CPF:</label> <input type="text" name="cpf" id="cpf" maxlength="14" onKeyPress="mascaraCPF(this)" onBlur="validarCPF(this)">
+                    <div class="erro" id="erro-cpf"></div>
+                </div>
+                <div class="form-group">
+                    <label>RG:</label> <input type="text" name="rg" id="rg" maxlength="12" onKeyPress="mascaraRG(this)">
+                    <div class="erro" id="erro-rg"></div>
+                </div>
+                <div class="form-group">
+                    <label>Sexo:</label><br>
+                    <input type="radio" name="sexo" value="feminino"> Feminino
+                    <input type="radio" name="sexo" value="masculino"> Masculino
+                    <input type="radio" name="sexo" value="outro"> Outro
+                    <div class="erro" id="erro-sexo"></div>
+                </div>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid">
+
+                <h4>CONTATO</h4>
+                <div class="form-group">
+                    <label>Telefone / WhatsApp:</label> <input type="text" name="whatsapp" id="whatsapp" maxlength="15" onKeyPress="mascaraTelefone(this)">
+                    <div class="erro" id="erro-whatsapp"></div>
+                </div>
+                <div class="form-group">
+                    <label>E-mail:</label> <input type="email" name="email" id="email">
+                    <div class="erro" id="erro-email"></div>
+                </div>
+                <div class="form-group">
+                    <label>Instagram:</label> <input type="text" name="instagram" id="instagram">
+                    <label>Facebook:</label> <input type="text" name="facebook" id="facebook">
+                </div>
+                <div class="form-group">
+                    <label>Cidade:</label> <input type="text" name="cidade" id="cidade">
+                    <label>Estado:</label> <input type="text" name="estado" id="estado">
+                </div>
+                <div class="form-group">
+                    <label>Endereço Completo:</label> <input type="text" name="endereco" id="endereco">
+                </div>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid">
+
+                <h4>INFORMAÇÕES SOBRE O FÃ-CLUBE</h4>
+                <div class="form-group">
+                    <p>Como conheceu o fã-clube?</p>
+                    <input type="checkbox" name="origem" value="instagram"> Instagram
+                    <input type="checkbox" name="origem" value="facebook"> Facebook
+                    <input type="checkbox" name="origem" value="tiktok"> TikTok
+                    <input type="checkbox" name="origem" value="amigos"> Amigos
+                    <input type="checkbox" name="origem" value="evento"> Evento/Show
+                    <input type="checkbox" name="origem" value="outro"> Outro
+                </div>
+
+                <div class="form-group">
+                    <p>Há quanto tempo acompanha?</p>
+                    <input type="radio" name="tempo" value="menos6"> Menos de 6 meses
+                    <input type="radio" name="tempo" value="1ano"> 1 ano
+                    <input type="radio" name="tempo" value="2anos"> 2 anos ou mais
+                </div>
+
+                <div class="form-group">
+                    <p>Deseja receber novidades e promoções?</p>
+                    <input type="radio" name="novidades" value="sim"> Sim
+                    <input type="radio" name="novidades" value="nao"> Não
+                </div>
+
+                <div class="form-group">
+                    <p>Deseja participar de eventos e ações exclusivas?</p>
+                    <input type="radio" name="eventos" value="sim"> Sim
+                    <input type="radio" name="eventos" value="nao"> Não
+                    <div class="erro" id="erro-eventos"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Mensagem ou Sugestão:</label>
+                    <textarea name="mensagem" id="mensagem" rows="4" style="width: 100%;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" name="autorizacao" id="autorizacao">
+                    <span>Autorizo o uso dos meus dados para comunicação, envio de novidades e informações relacionadas ao fã-clube.</span>
+                    <div class="erro" id="erro-autorizacao"></div>
+                </div>
+
+                <button type="submit" style="margin-top: 20px; padding: 12px 30px; cursor: pointer;">Enviar Cadastro</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Marcos & Belutti - Dev. WEB - Marcos Vinicio T. Assunção</p>
+    </footer>
+
+</body>
+</html>

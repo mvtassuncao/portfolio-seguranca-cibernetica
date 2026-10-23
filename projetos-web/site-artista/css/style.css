@@ -1,0 +1,638 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #111;
+    border-bottom: 1px solid #121212;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+header .logo img {
+    height: 55px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.02);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+header nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #fff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.redes-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-nav a {
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.redes-nav a:hover {
+    color: #fff;
+}
+
+#fotoprincipal {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+}
+
+#fotoprincipal img:first-of-type {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+#fotoprincipal::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 50%, #000 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.logo-central-fusao {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 880px;
+    max-width: 85%;
+    height: auto;
+    z-index: 3;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.95));
+    transition: transform 0.3s ease;
+}
+
+#fotoprincipal:hover .logo-central-fusao {
+    transform: translateX(-50%) scale(1.03);
+}
+
+.banner-carrossel {
+    position: relative;
+    width: 100%;
+    height: 880px;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.banner-carrossel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, #000, transparent);
+    z-index: 2;
+}
+
+.banner-carrossel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 2;
+}
+
+.slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo-slide {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    z-index: 3;
+    max-width: 700px;
+}
+
+.conteudo-slide h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.conteudo-slide p {
+    font-size: 20px;
+    color: #e0e0e0;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.btn-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.anterior {
+    left: 25px;
+}
+
+.proximo {
+    right: 25px;
+}
+
+.secao-musica-container {
+    width: 100%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+}
+
+.conteudo-home {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    gap: 60px;
+}
+
+.noticias-bloco {
+    flex: 1.2;
+}
+
+.musicas-bloco {
+    flex: 1;
+}
+
+.noticias-bloco h3,
+.musicas-bloco h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 35px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+}
+
+.card-noticia {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-noticia:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.8);
+}
+
+.card-noticia h4 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card-noticia p {
+    color: #e2e2e2;
+    font-size: 16.5px;
+    line-height: 1.7;
+}
+
+.secao-biografia-container {
+    width: 100%;
+    min-height: 85vh;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.foto-artista {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.foto-artista img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.artista-esquerda {
+    left: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.artista-esquerda img {
+    object-position: 25% center;
+}
+
+.artista-esquerda::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 60%, #000 100%);
+}
+
+.artista-direita {
+    right: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.artista-direita img {
+    object-position: 75% center;
+}
+
+.artista-direita::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, transparent 60%, #000 100%);
+}
+
+.conteudo-biografia-central {
+    flex: 0 0 45%;
+    max-width: 45%;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.conteudo-biografia-central .titulo-inclinado {
+    font-size: 46px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 45px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+}
+
+.galeria-instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.instagram-media {
+    min-width: 326px;
+    max-width: 540px;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-conteudo {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1000;
+}
+
+.lightbox-fechar:hover {
+    color: #ccc;
+}
+
+.container-noticias {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.grid-noticias {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-noticias .card-biografia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.grid-noticias .card-biografia .btn-leia {
+    margin-top: auto;
+    width: fit-content;
+}
+
+.form-fã-clube {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.erro {
+    color: #ff4444;
+    font-size: 13px;
+    margin-top: 3px;
+    display: block;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #ccc;
+}
+
+.secao-central-fas {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../fas.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.link-central-fas {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.card-central-fas-interno {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+}
+
+.card-central-fas-interno:hover {
+    transform: scale(1.05);
+}
+
+.card-central-fas-interno p {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.card-central-fas-interno h3 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+}
+
+.titulo-inclinado {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.card-biografia {
+    background: rgba(15, 15, 15, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-biografia:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+}
+
+.card-biografia p {
+    color: #e0e0e0;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.card-biografia .espacamento-paragrafo {
+    margin-top: 25px;
+}
+
+.card-biografia h4 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #080808;
+    color: #888;
+    font-size: 15px;
+    border-top: 1px solid #111;
+    letter-spacing: 0.5px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.redes-sociais a {
+    color: #666;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}

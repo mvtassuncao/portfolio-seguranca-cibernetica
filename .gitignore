@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Dados e segredos locais
+*.db
+*.sqlite*
+*.pem
+*.key
+.env*
+.student.json
+
+# Sistema e IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Compactados e executáveis
+*.zip
+*.exe
+

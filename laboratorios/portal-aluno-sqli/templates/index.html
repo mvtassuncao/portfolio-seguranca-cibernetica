@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal do Aluno</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #1769aa;
+            color: white;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            background: #eee;
+        }
+
+        .flag {
+            margin-top: 20px;
+            padding: 15px;
+            background: #d4edda;
+            color: #155724;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Portal do Aluno</h2>
+
+    <form method="POST" onsubmit="return validarMatricula()">
+
+        <label>Matrícula</label>
+
+        <!--
+            A validação existe APENAS no frontend.
+            Portanto, pode ser contornada interceptando a requisição.
+        -->
+        <input
+            type="text"
+            id="matricula"
+            name="matricula"
+            placeholder="Somente números"
+        >
+
+        <label>Senha</label>
+
+        <input
+            type="password"
+            name="senha"
+            placeholder="Senha"
+        >
+
+        <button type="submit">
+            Entrar
+        </button>
+    </form>
+
+    {% if mensagem %}
+        <div class="message">
+            {{ mensagem }}
+        </div>
+    {% endif %}
+
+    {% if flag %}
+        <div class="flag">
+            {{ flag }}
+        </div>
+    {% endif %}
+</div>
+
+
+<script>
+function validarMatricula() {
+    const matricula = document.getElementById("matricula").value;
+
+    // Validação propositalmente somente no frontend.
+    if (!/^\d+$/.test(matricula)) {
+        alert("A matrícula deve conter somente números.");
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+</body>
+</html>
